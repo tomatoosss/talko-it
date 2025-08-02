@@ -1,0 +1,32 @@
+{
+  "name": "TALKO IT Solutions",
+  "short_name": "TALKO IT",
+  "description": "Szwajcarski partner doradczy IT dostarczający szyte na miarę architekturę, technologię i strategie rozwoju",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/logo/grafika_przezroczyste_tlo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo/grafika_przezroczyste_tlo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "pl",
+  "dir": "ltr"
+} 
