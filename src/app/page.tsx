@@ -67,7 +67,7 @@ export default function Home() {
       {/* Loading Screen */}
       {showLoader && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark">
         <VantaBackground effect="topology" />
       
       {/* Navigation */}
@@ -227,81 +227,81 @@ export default function Home() {
       <section className="py-24 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Nasze usługi
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Oferujemy kompleksowe rozwiązania IT dostosowane do Twoich potrzeb
             </p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-8">
             {/* Consulting */}
-            <Link href="/services/consulting" className="service-card bg-white/10 dark:bg-slate-800/10 backdrop-blur-md p-8 rounded-xl min-w-[300px] max-w-[350px] hover:bg-white/20 dark:hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 text-center">
+            <Link href="/services/consulting" className="service-card bg-slate-800/10 backdrop-blur-md p-8 rounded-xl min-w-[300px] max-w-[350px] hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Consulting
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 text-center">
+              <p className="text-slate-300 text-center">
                 Profesjonalne doradztwo IT w zakresie architektury, technologii i strategii rozwoju.
               </p>
             </Link>
 
             {/* System Implementation */}
-            <Link href="/services/system-implementation" className="service-card bg-white/10 dark:bg-slate-800/10 backdrop-blur-md p-8 rounded-xl min-w-[300px] max-w-[350px] hover:bg-white/20 dark:hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 text-center">
+            <Link href="/services/system-implementation" className="service-card bg-slate-800/10 backdrop-blur-md p-8 rounded-xl min-w-[300px] max-w-[350px] hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Wdrożenia Systemów IT
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 text-center">
+              <p className="text-slate-300 text-center">
                 Kompleksowe wdrażanie i integracja systemów informatycznych dla przedsiębiorstw.
               </p>
             </Link>
 
             {/* Automation */}
-            <Link href="/services/automation" className="service-card bg-white/10 dark:bg-slate-800/10 backdrop-blur-md p-8 rounded-xl min-w-[300px] max-w-[350px] hover:bg-white/20 dark:hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 text-center">
+            <Link href="/services/automation" className="service-card bg-slate-800/10 backdrop-blur-md p-8 rounded-xl min-w-[300px] max-w-[350px] hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Automatyzacja
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 text-center">
+              <p className="text-slate-300 text-center">
                 Automatyzacja procesów biznesowych i wdrażanie rozwiązań DevOps dla zwiększenia efektywności.
               </p>
             </Link>
 
             {/* IoT */}
-            <Link href="/services/iot" className="service-card bg-white/10 dark:bg-slate-800/10 backdrop-blur-md p-8 rounded-xl flex flex-col justify-center items-center text-center min-w-[300px] max-w-[350px] hover:bg-white/20 dark:hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+            <Link href="/services/iot" className="service-card bg-slate-800/10 backdrop-blur-md p-8 rounded-xl flex flex-col justify-center items-center text-center min-w-[300px] max-w-[350px] hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4">
                 IoT
               </h3>
-              <p className="text-slate-600 dark:text-slate-300">
+              <p className="text-slate-300">
                 Rozwiązania Internet of Things dla inteligentnych systemów, czujników i automatyzacji.
               </p>
             </Link>
 
             {/* AI */}
-            <Link href="/services/ai" className="service-card bg-white/10 dark:bg-slate-800/10 backdrop-blur-md p-8 rounded-xl flex flex-col justify-center items-center text-center min-w-[300px] max-w-[350px] hover:bg-white/20 dark:hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+            <Link href="/services/ai" className="service-card bg-slate-800/10 backdrop-blur-md p-8 rounded-xl flex flex-col justify-center items-center text-center min-w-[300px] max-w-[350px] hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4">
                 AI
               </h3>
-              <p className="text-slate-600 dark:text-slate-300">
+              <p className="text-slate-300">
                 Rozwiązania sztucznej inteligencji i uczenia maszynowego dla zaawansowanej automatyzacji.
               </p>
             </Link>
 
             {/* Precision Agriculture */}
-            <Link href="/services/precision-agriculture" className="service-card bg-white/10 dark:bg-slate-800/10 backdrop-blur-md p-8 rounded-xl flex flex-col justify-center items-center text-center min-w-[300px] max-w-[350px] hover:bg-white/20 dark:hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+            <Link href="/services/precision-agriculture" className="service-card bg-slate-800/10 backdrop-blur-md p-8 rounded-xl flex flex-col justify-center items-center text-center min-w-[300px] max-w-[350px] hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 hover:border-2 hover:border-blue-400/50 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4">
                 Rolnictwo precyzyjne
               </h3>
-              <p className="text-slate-600 dark:text-slate-300">
+              <p className="text-slate-300">
                 Zaawansowane technologie dla rolnictwa precyzyjnego, monitorowania upraw i optymalizacji produkcji.
               </p>
             </Link>
 
             {/* Magic */}
-            <Link href="/services/magic" className="service-card bg-white/10 dark:bg-slate-800/10 backdrop-blur-md p-8 rounded-xl flex flex-col justify-center items-center text-center min-w-[300px] max-w-[350px] hover:bg-white/20 dark:hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 hover:border-2 hover:border-purple-400/50 transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+            <Link href="/services/magic" className="service-card bg-slate-800/10 backdrop-blur-md p-8 rounded-xl flex flex-col justify-center items-center text-center min-w-[300px] max-w-[350px] hover:bg-slate-800/20 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 hover:border-2 hover:border-purple-400/50 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4">
                 Magic
               </h3>
-              <p className="text-slate-600 dark:text-slate-300">
+              <p className="text-slate-300">
                 Udział wysokiej klasy specjalisty Kombi Bombi w projektach IT - magia technologii w praktyce.
               </p>
             </Link>
@@ -310,12 +310,12 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-slate-50/90 dark:bg-slate-800/90 backdrop-blur-sm">
+      <section id="about" className="py-24 bg-slate-800/90 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">O nas</h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">O nas</h2>
+              <p className="text-lg text-slate-300 mb-6">
                 Jesteśmy szwajcarskim partnerem doradczym IT dostarczającym szyte na miarę architekturę, technologię i strategie rozwoju — od systemów IT, przez automatyzację/DevOps i IoT, po AI. Pracujemy wg PMP i SAFe, z naciskiem na value-driven decyzje, mierzalne ROI/TCO i transparentną współpracę. Stawiamy na win-win, długoterminowe relacje i rozwiązania bez lock-in, dopasowane do realiów rynku szwajcarskiego.
               </p>
             </div>
@@ -387,13 +387,13 @@ export default function Home() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-16 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm relative z-10">
+      <section className="py-16 bg-slate-900/90 backdrop-blur-sm relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Technologie
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Wykorzystujemy najnowsze technologie i narzędzia, aby tworzyć innowacyjne rozwiązania dla naszych klientów.
             </p>
           </div>
@@ -404,7 +404,7 @@ export default function Home() {
                 {/* Partnerzy technologiczni */}
                 <div className="flex gap-8 items-center">
                   {/* Ansible */}
-                  <div className="flex items-center justify-center p-6 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-white/70 dark:hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
+                  <div className="flex items-center justify-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
                     <div className="text-center">
                       <div className="flex items-center justify-center mb-3 mx-auto hover:scale-110 transition-transform duration-300">
                         <img 
@@ -413,12 +413,12 @@ export default function Home() {
                           className="h-12 w-auto"
                         />
                       </div>
-                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">Ansible</p>
+                      <p className="text-sm font-semibold text-slate-300">Ansible</p>
                     </div>
                   </div>
 
                   {/* Jinja2 */}
-                  <div className="flex items-center justify-center p-6 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-white/70 dark:hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
+                  <div className="flex items-center justify-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
                     <div className="text-center">
                       <div className="flex items-center justify-center mb-3 mx-auto hover:scale-110 transition-transform duration-300">
                         <img 
@@ -427,12 +427,12 @@ export default function Home() {
                           className="h-12 w-auto"
                         />
                       </div>
-                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">Jinja2</p>
+                      <p className="text-sm font-semibold text-slate-300">Jinja2</p>
                     </div>
                   </div>
 
                   {/* n8n */}
-                  <div className="flex items-center justify-center p-6 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-white/70 dark:hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
+                  <div className="flex items-center justify-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
                     <div className="text-center">
                       <div className="flex items-center justify-center mb-3 mx-auto hover:scale-110 transition-transform duration-300">
                         <img 
@@ -441,12 +441,12 @@ export default function Home() {
                           className="h-12 w-auto"
                         />
                       </div>
-                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">n8n</p>
+                      <p className="text-sm font-semibold text-slate-300">n8n</p>
                     </div>
                   </div>
 
                   {/* Podman */}
-                  <div className="flex items-center justify-center p-6 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-white/70 dark:hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
+                  <div className="flex items-center justify-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
                     <div className="text-center">
                       <div className="flex items-center justify-center mb-3 mx-auto hover:scale-110 transition-transform duration-300">
                         <img 
@@ -455,12 +455,12 @@ export default function Home() {
                           className="h-12 w-auto"
                         />
                       </div>
-                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">Podman</p>
+                      <p className="text-sm font-semibold text-slate-300">Podman</p>
                     </div>
                   </div>
 
                   {/* AAP2 */}
-                  <div className="flex items-center justify-center p-6 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-white/70 dark:hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
+                  <div className="flex items-center justify-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-lg hover:bg-slate-800/70 transition-all duration-300 group min-w-[200px]">
                     <div className="text-center">
                       <div className="flex items-center justify-center mb-3 mx-auto hover:scale-110 transition-transform duration-300">
                         <img 
@@ -469,7 +469,7 @@ export default function Home() {
                           className="h-12 w-auto"
                         />
                       </div>
-                      <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">AAP2</p>
+                      <p className="text-sm font-semibold text-slate-300">AAP2</p>
                     </div>
                   </div>
                 </div>
@@ -480,13 +480,13 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-16 bg-slate-50/90 dark:bg-slate-800/90 backdrop-blur-sm">
+      <section className="py-16 bg-slate-800/90 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Nasi Partnerzy
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Współpracujemy z wiodącymi firmami technologicznymi, aby dostarczać najlepsze rozwiązania.
             </p>
           </div>
@@ -594,11 +594,11 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 bg-white/20 dark:bg-slate-800/20 backdrop-blur-md rounded-xl p-8 hover:bg-white/30 dark:hover:bg-slate-800/30 hover:shadow-lg transition-all duration-300">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <div className="text-center mb-16 bg-slate-800/20 backdrop-blur-md rounded-xl p-8 hover:bg-slate-800/30 hover:shadow-lg transition-all duration-300">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Skontaktuj się z nami
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-300">
+            <p className="text-xl text-slate-300">
               Jesteśmy tutaj, aby pomóc Ci w realizacji Twoich projektów IT
             </p>
           </div>

@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
+    <html lang="pl" className="dark">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
@@ -80,7 +80,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} dark`}>
         {children}
       </body>
     </html>

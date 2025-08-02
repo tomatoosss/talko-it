@@ -67,7 +67,7 @@ export default function MagicService() {
             
             {/* Left Column - Services */}
             <div className="space-y-8">
-              <div className="bg-white/10 dark:bg-slate-800/10 backdrop-blur-md rounded-xl p-8 border border-purple-500/20">
+              <div className="bg-slate-800/10 backdrop-blur-md rounded-xl p-8 border border-purple-500/20">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   <span className="text-3xl mr-3">🔮</span>
                   Usługi Magic
