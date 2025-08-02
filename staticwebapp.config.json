@@ -25,5 +25,12 @@
     "x-frame-options": "DENY",
     "x-content-type-options": "nosniff",
     "referrer-policy": "strict-origin-when-cross-origin"
-  }
+  },
+  "platformErrorOverrides": [
+    {
+      "errorType": "NotFound",
+      "serve": "/404.html"
+    }
+  ],
+  "trailingSlash": "auto"
 } 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import VantaBackground from "@/components/VantaBackground";
+import MFAGuard from "@/components/MFAGuard";
 
 export default function MagicService() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -12,8 +13,9 @@ export default function MagicService() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <VantaBackground effect="fog" magicMode={true} />
+    <MFAGuard>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <VantaBackground effect="fog" magicMode={true} />
       
       {/* Navigation */}
       <nav className="bg-slate-900/90 backdrop-blur-lg border-b border-slate-700/50 sticky top-0 z-50">
@@ -224,6 +226,7 @@ export default function MagicService() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </MFAGuard>
   );
 } 
