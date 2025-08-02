@@ -12,15 +12,298 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+/* Dark mode variables */
+.dark {
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Ensure proper font loading */
+.font-sans {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hover animations for cards */
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Fade in animation for hero section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-fill-mode: both;
+}
+
+/* Fade in slide animation for Smart IT text */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-slide {
+  opacity: 0;
+  animation: fadeInSlide 1.2s ease-out forwards;
+  animation-fill-mode: both;
+}
+
+/* Animacja przewijania partnerów */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite alternate;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Tooltips dla partnerów */
+.partner-tooltip {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+}
+
+.group:hover .partner-tooltip {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
+}
+
+/* Zatrzymaj animację scroll podczas hover na tooltip */
+.group:hover {
+  animation-play-state: paused !important;
+}
+
+/* Zapewnij że tooltips są zawsze na wierzchu */
+.partner-tooltip {
+  z-index: 9999 !important;
+}
+
+/* Animacja przewijania technologii */
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 25s linear infinite alternate;
+}
+
+/* Pause animation on hover */
+.animate-scroll-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Logo image with transparent background */
+.logo-video {
+  border-radius: 50%;
+  background-color: transparent;
+  backdrop-filter: none;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo-video:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Dark mode adjustments for logo */
+.dark .logo-video {
+  filter: brightness(0.9) invert(1);
+}
+
+/* Company name styling */
+.company-name {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .company-name {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading progress bar */
+.loading-progress {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  transition: width 0.05s linear;
+  will-change: width;
+}
+
+.loading-progress-container {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 9999px;
+}
+
+/* Dark mode progress bar */
+.dark .loading-progress {
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+}
+
+/* Fade out effects */
+.fade-out-scale {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-out-scale.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.fade-out-slide-up {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-out-slide-up.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.fade-out-blur {
+  transition: opacity 0.5s ease-out, filter 0.5s ease-out;
+}
+
+.fade-out-blur.fade-out {
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.fade-out-rotate {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-out-rotate.fade-out {
+  opacity: 0;
+  transform: rotate(5deg) scale(0.95);
+}
+
+/* Partner card animations */
+.partner-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.partner-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.partner-card img {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(20%);
+}
+
+.partner-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* Enhanced hover effects */
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Loading screen animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+
