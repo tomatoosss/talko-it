@@ -77,15 +77,17 @@ export default function TeamPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img 
-                src="/images/logo/grafika_przezroczyste_tlo.png" 
-                alt="TALKO IT Solutions Logo" 
-                className="w-12 h-12 mr-4 logo-video"
-              />
-              <h1 className="text-2xl font-bold text-white font-sans tracking-wider">
-                <span className="text-white">TALKO</span>
-                <span className="company-name"> IT Solutions</span>
-              </h1>
+              <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
+                <img 
+                  src="/images/logo/grafika_przezroczyste_tlo.png" 
+                  alt="TALKO IT Solutions Logo" 
+                  className="w-12 h-12 mr-4 logo-video"
+                />
+                <h1 className="text-2xl font-bold text-white font-sans tracking-wider">
+                  <span className="text-white">TALKO</span>
+                  <span className="company-name"> IT Solutions</span>
+                </h1>
+              </a>
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <a href="/" className="text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">

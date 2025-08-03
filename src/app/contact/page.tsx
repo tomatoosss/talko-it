@@ -7,6 +7,7 @@ import LoadingScreen from '@/components/LoadingScreen';
 
 export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,6 +15,18 @@ export default function ContactPage() {
     }, 2000);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (!target.closest('.services-menu')) {
+        setIsServicesMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
   const handleLoadingComplete = () => {
@@ -33,32 +46,101 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img 
-                src="/images/logo/grafika_przezroczyste_tlo.png" 
-                alt="TALKO IT Solutions Logo" 
-                className="w-12 h-12 mr-4 logo-video"
-              />
-              <h1 className="text-2xl font-bold text-white font-sans tracking-wider">
-                <span className="text-white">TALKO</span>
-                <span className="company-name"> IT Solutions</span>
-              </h1>
+              <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
+                <img 
+                  src="/images/logo/grafika_przezroczyste_tlo.png" 
+                  alt="TALKO IT Solutions Logo" 
+                  className="w-12 h-12 mr-4 logo-video"
+                />
+                <h1 className="text-2xl font-bold text-white font-sans tracking-wider">
+                  <span className="text-white">TALKO</span>
+                  <span className="company-name"> IT Solutions</span>
+                </h1>
+              </a>
             </div>
             <div className="hidden md:flex items-center space-x-4">
               <a href="/" className="text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Strona główna
               </a>
-              <a href="/#services" className="text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Usługi
-              </a>
-              <a href="/#about" className="text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                O nas
-              </a>
-              <a href="/#technologies" className="text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Technologie
-              </a>
-              <a href="/#partners" className="text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Partnerzy
-              </a>
+              
+              <div className="relative services-menu">
+                <button 
+                  onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
+                  onMouseEnter={() => setIsServicesMenuOpen(true)}
+                  onMouseLeave={() => {
+                    setTimeout(() => {
+                      if (!document.querySelector('.services-menu:hover')) {
+                        setIsServicesMenuOpen(false);
+                      }
+                    }, 100);
+                  }}
+                  className="text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors inline-flex items-center"
+                >
+                  Usługi
+                  <svg className={`w-4 h-4 ml-1 transition-transform duration-200 ${isServicesMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                {/* Services Dropdown Menu */}
+                <div 
+                  className={`absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-lg border border-slate-700/50 transition-all duration-200 ${isServicesMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                  onMouseEnter={() => setIsServicesMenuOpen(true)}
+                  onMouseLeave={() => {
+                    setTimeout(() => {
+                      if (!document.querySelector('.services-menu:hover')) {
+                        setIsServicesMenuOpen(false);
+                      }
+                    }, 100);
+                  }}
+                >
+                  <div className="py-2">
+                    <a 
+                      href="/services/consulting" 
+                      className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-blue-400 transition-colors"
+                      onClick={() => setIsServicesMenuOpen(false)}
+                    >
+                      Consulting
+                    </a>
+                    <a 
+                      href="/services/system-implementation" 
+                      className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-blue-400 transition-colors"
+                      onClick={() => setIsServicesMenuOpen(false)}
+                    >
+                      Wdrożenia Systemów IT
+                    </a>
+                    <a 
+                      href="/services/automation" 
+                      className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-blue-400 transition-colors"
+                      onClick={() => setIsServicesMenuOpen(false)}
+                    >
+                      Automatyzacja
+                    </a>
+                    <a 
+                      href="/services/iot" 
+                      className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-blue-400 transition-colors"
+                      onClick={() => setIsServicesMenuOpen(false)}
+                    >
+                      IoT
+                    </a>
+                    <a 
+                      href="/services/ai" 
+                      className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-blue-400 transition-colors"
+                      onClick={() => setIsServicesMenuOpen(false)}
+                    >
+                      AI
+                    </a>
+                    <a 
+                      href="/services/precision-agriculture" 
+                      className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-700/50 hover:text-blue-400 transition-colors"
+                      onClick={() => setIsServicesMenuOpen(false)}
+                    >
+                      Rolnictwo precyzyjne
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
               <a href="/team" className="text-slate-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Zespół
               </a>
@@ -109,19 +191,20 @@ export default function ContactPage() {
             <div>
               <h4 className="font-semibold mb-4">Usługi</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>Consulting</li>
-                <li>Wdrożenia Systemów IT</li>
-                <li>Automatyzacja</li>
-                <li>Konsultacje IT</li>
+                <li><a href="/services/consulting" className="hover:text-blue-400 transition-colors">Consulting</a></li>
+                <li><a href="/services/system-implementation" className="hover:text-blue-400 transition-colors">Wdrożenia Systemów IT</a></li>
+                <li><a href="/services/automation" className="hover:text-blue-400 transition-colors">Automatyzacja</a></li>
+                <li><a href="/services/iot" className="hover:text-blue-400 transition-colors">IoT</a></li>
+                <li><a href="/services/ai" className="hover:text-blue-400 transition-colors">AI</a></li>
+                <li><a href="/services/precision-agriculture" className="hover:text-blue-400 transition-colors">Rolnictwo precyzyjne</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Firma</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>O nas</li>
-                <li>Zespół</li>
-                <li>Kariera</li>
-                <li>Blog</li>
+                <li><a href="/#about" className="hover:text-blue-400 transition-colors">O nas</a></li>
+                <li><a href="/team" className="hover:text-blue-400 transition-colors">Zespół</a></li>
+                <li><a href="/contact" className="hover:text-blue-400 transition-colors">Kontakt</a></li>
               </ul>
             </div>
             <div>

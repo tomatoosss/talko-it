@@ -1145,19 +1145,20 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Usługi</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>Consulting</li>
-                <li>Wdrożenia Systemów IT</li>
-                <li>Automatyzacja</li>
-                <li>Konsultacje IT</li>
+                <li><a href="/services/consulting" className="hover:text-blue-400 transition-colors">Consulting</a></li>
+                <li><a href="/services/system-implementation" className="hover:text-blue-400 transition-colors">Wdrożenia Systemów IT</a></li>
+                <li><a href="/services/automation" className="hover:text-blue-400 transition-colors">Automatyzacja</a></li>
+                <li><a href="/services/iot" className="hover:text-blue-400 transition-colors">IoT</a></li>
+                <li><a href="/services/ai" className="hover:text-blue-400 transition-colors">AI</a></li>
+                <li><a href="/services/precision-agriculture" className="hover:text-blue-400 transition-colors">Rolnictwo precyzyjne</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Firma</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>O nas</li>
-                <li>Zespół</li>
-                <li>Kariera</li>
-                <li>Blog</li>
+                <li><a href="/#about" className="hover:text-blue-400 transition-colors">O nas</a></li>
+                <li><a href="/team" className="hover:text-blue-400 transition-colors">Zespół</a></li>
+                <li><a href="/contact" className="hover:text-blue-400 transition-colors">Kontakt</a></li>
               </ul>
             </div>
             <div>
