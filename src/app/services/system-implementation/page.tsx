@@ -334,7 +334,7 @@ export default function SystemImplementationPage() {
               Umów 30-min konsultację — przygotujemy wstępny projekt (HLD) pod Twoją infrastrukturę: on-prem, chmury publiczne/prywatne lub środowisko air-gapped.
             </p>
             <Link 
-              href="/#contact" 
+                              href="/contact" 
               className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center justify-center hover:bg-blue-50"
             >
               Umów konsultację

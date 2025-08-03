@@ -131,7 +131,45 @@ html {
   z-index: 9999 !important;
 }
 
-/* Animacja przewijania technologii */
+/* Animacja przewijania technologii - styl n8n.io */
+@keyframes scroll-technologies {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-technologies {
+  animation: scroll-technologies 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-scroll-technologies:hover {
+  animation-play-state: paused;
+}
+
+/* Animacja przewijania partnerów - styl n8n.io */
+@keyframes scroll-partners {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-partners {
+  animation: scroll-partners 35s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-scroll-partners:hover {
+  animation-play-state: paused;
+}
+
+/* Animacja przewijania technologii - reverse (stara wersja) */
 @keyframes scroll-reverse {
   0% {
     transform: translateX(-50%);
@@ -305,5 +343,45 @@ html {
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* Gradient shift animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Team card border effect */
+.team-card-border {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.team-card-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+  filter: blur(8px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+
+
+
 
 

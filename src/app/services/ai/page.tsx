@@ -235,7 +235,7 @@ export default function AIPage() {
               Napisz — przygotujemy PoC w 2–4 tygodnie i plan wdrożenia dopasowany do Twoich danych i wymagań.
             </p>
             <Link 
-              href="/#contact" 
+                              href="/contact" 
               className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center justify-center hover:bg-blue-50"
             >
               Umów konsultację

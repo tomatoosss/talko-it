@@ -5,6 +5,10 @@
       "allowedRoles": ["anonymous"]
     },
     {
+      "route": "/services/magic/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
       "route": "/*",
       "serve": "/index.html",
       "statusCode": 200
@@ -32,5 +36,18 @@
       "serve": "/404.html"
     }
   ],
-  "trailingSlash": "auto"
+  "trailingSlash": "auto",
+  "auth": {
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/common/v2.0",
+          "clientIdSettingName": "AZURE_CLIENT_ID"
+        },
+        "validation": {
+          "allowedAudiences": ["api://AzureADTokenExchange"]
+        }
+      }
+    }
+  }
 } 

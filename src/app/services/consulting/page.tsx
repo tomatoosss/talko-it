@@ -314,7 +314,7 @@ export default function ConsultingPage() {
               Przygotujemy propozycję wartości z „quick wins", mapą ryzyk i szkicem roadmapy — tak, by decyzja była business-case driven i niosła realny efekt tu i teraz.
             </p>
             <Link 
-              href="/#contact" 
+                              href="/contact" 
               className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center justify-center hover:bg-blue-50"
             >
               Umów konsultację

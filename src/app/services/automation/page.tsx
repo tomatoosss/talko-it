@@ -399,7 +399,7 @@ export default function AutomationPage() {
               Umów 30-min konsultację — pokażemy plan automatyzacji pod Twoje środowisko (SSOT lub MVoT) i przygotujemy szybki pilotaż.
             </p>
             <Link 
-              href="/#contact" 
+                              href="/contact" 
               className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center justify-center hover:bg-blue-50"
             >
               Umów konsultację

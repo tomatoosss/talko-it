@@ -200,7 +200,7 @@ export default function MagicService() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/#contact" 
+                href="/contact" 
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
                 Skontaktuj się
